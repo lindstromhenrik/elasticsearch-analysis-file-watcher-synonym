@@ -1,7 +1,7 @@
-File watcher synonym filter for ElasticSearch
+File watcher synonym for ElasticSearch
 ==================================
 
-The file watcher synonym plugin adds an synonym token filter that reloads the synonym file at given intervals (default 60s).
+The file watcher synonym plugin adds a synonym token filter that reloads the synonym file at given intervals (default 60s).
 
 Example:
 
