@@ -3,7 +3,6 @@ package com.lindstromhenrik.elasticsearch.plugin;
 import org.elasticsearch.common.inject.Module;
 import org.elasticsearch.index.analysis.AnalysisModule;
 import org.elasticsearch.plugins.AbstractPlugin;
-import org.elasticsearch.rest.RestModule;
 
 import com.lindstromhenrik.elasticsearch.plugin.synonym.index.analysis.FileWatcherSynonymTokenFilterFactory;
 

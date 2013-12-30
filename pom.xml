@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.lindstromhenrik.elasticsearch</groupId>
-  <artifactId>elasticsearch-file-watcher-synonym</artifactId>
-  <version>0.1.0</version>
-  <name>elasticsearch-file-watcher-synonym</name>
-  <properties>
-        <elasticsearch.version>0.90.1</elasticsearch.version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.lindstromhenrik.elasticsearch</groupId>
+    <artifactId>elasticsearch-file-watcher-synonym</artifactId>
+    <version>0.1.0</version>
+    <name>elasticsearch-file-watcher-synonym</name>
+    <properties>
+        <elasticsearch.version>0.90.9</elasticsearch.version>
     </properties>
- <build>
+    <build>
         <!-- Create a zip file according to elasticsearch naming scheme -->
         <plugins>
             <plugin>
@@ -47,18 +47,18 @@
         </pluginManagement>
     </build>
     <dependencies>
-    <dependency>
-    	<groupId>org.elasticsearch</groupId>
-    	<artifactId>elasticsearch</artifactId>
-    	<version>${elasticsearch.version}</version>
-    </dependency>
-  </dependencies>
-  
-  <repositories>
-		<repository>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
             <id>sonatype</id>
             <url>http://oss.sonatype.org/content/repositories/releases/</url>
         </repository>
-	</repositories>
-  <description>Analysis plugin for synonyms</description>
+    </repositories>
+    <description>Analysis plugin for synonyms</description>
 </project>
