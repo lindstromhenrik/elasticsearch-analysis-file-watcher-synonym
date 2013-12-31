@@ -22,7 +22,7 @@
                             <target>
                                 <zip basedir="${project.build.directory}"
                                      includes="${project.build.finalName}.jar"
-                                     destfile="${project.build.directory}/elasticsearch-${project.name}-${elasticsearch.version}.zip" />
+                                     destfile="${project.build.directory}/${project.name}-${elasticsearch.version}-{elasticsearch.version}.zip" />
                             </target>
                         </configuration>
                         <goals>
