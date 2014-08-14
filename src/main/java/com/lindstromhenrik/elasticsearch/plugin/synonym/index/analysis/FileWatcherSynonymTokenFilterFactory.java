@@ -10,7 +10,7 @@ import org.apache.lucene.analysis.synonym.SolrSynonymParser;
 import org.apache.lucene.analysis.synonym.SynonymFilter;
 import org.apache.lucene.analysis.synonym.SynonymMap;
 import org.apache.lucene.analysis.synonym.WordnetSynonymParser;
-import org.elasticsearch.ElasticSearchIllegalArgumentException;
+import org.elasticsearch.ElasticsearchIllegalArgumentException;
 import org.elasticsearch.common.base.Charsets;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
@@ -73,10 +73,10 @@ public class FileWatcherSynonymTokenFilterFactory extends AbstractTokenFilterFac
                 lastModified = (new File(synonymFileURL.toURI())).lastModified();
             } catch (Exception e) {
                 String message = String.format(Locale.ROOT, "IOException while reading synonyms_path: %s", e.getMessage());
-                throw new ElasticSearchIllegalArgumentException(message);
+                throw new ElasticsearchIllegalArgumentException(message);
             }
         } else {
-            throw new ElasticSearchIllegalArgumentException("file watcher synonym requires `synonyms_path` to be configured");
+            throw new ElasticsearchIllegalArgumentException("file watcher synonym requires `synonyms_path` to be configured");
         }
 
         this.indexName = index.getName();
@@ -93,7 +93,7 @@ public class FileWatcherSynonymTokenFilterFactory extends AbstractTokenFilterFac
             tokenizerFactoryFactory = indicesAnalysisService.tokenizerFactoryFactory(tokenizerName);
         }
         if (tokenizerFactoryFactory == null) {
-            throw new ElasticSearchIllegalArgumentException("failed to find tokenizer [" + tokenizerName + "] for synonym token filter");
+            throw new ElasticsearchIllegalArgumentException("failed to find tokenizer [" + tokenizerName + "] for synonym token filter");
         }
         final TokenizerFactory tokenizerFactory = tokenizerFactoryFactory.create(tokenizerName, settings);
 
@@ -119,7 +119,7 @@ public class FileWatcherSynonymTokenFilterFactory extends AbstractTokenFilterFac
 
             synonymMap = parser.build();
         } catch (Exception e) {
-            throw new ElasticSearchIllegalArgumentException("failed to build synonyms", e);
+            throw new ElasticsearchIllegalArgumentException("failed to build synonyms", e);
         }
 
         scheduledFuture = threadPool.scheduleWithFixedDelay(new FileMonitor(), interval);

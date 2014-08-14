@@ -5,7 +5,7 @@
     <version>0.1.0</version>
     <name>elasticsearch-file-watcher-synonym</name>
     <properties>
-        <elasticsearch.version>0.90.9</elasticsearch.version>
+        <elasticsearch.version>1.2.1</elasticsearch.version>
     </properties>
     <build>
         <!-- Create a zip file according to elasticsearch naming scheme -->
