@@ -40,5 +40,6 @@ bin/plugin -install analysis-file-watcher-synonym  -url https://github.com/linds
     ------------------------------------------------------
     | analysis file watcher synonym   | Elasticsearch    |
     ------------------------------------------------------
-    | 0.90.9-0.1.0                    | 0.90.9 -> master |
+    | 0.2.0                           | 1.0.0 -> master  |
+    | 0.1.0                           | 0.90.x           |
     ------------------------------------------------------
